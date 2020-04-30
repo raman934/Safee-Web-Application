@@ -12,10 +12,10 @@
 
 ##### 4. Now you are have activated the virtual environment
 
-##### 5. Now move inside the web_application directory using ``` cd web_application/ ```
+##### 5. Now move inside the web_application directory using ``` $ cd web_application/ ```
 
-##### 6. Now type ``` python --version ``` and it should display python version 3 if it doesn't, try ``` python3 --version ``` or just install python 3
+##### 6. Now type ``` $ python --version ``` and it should display python version 3 if it doesn't, try ``` $ python3 --version ``` or just install python 3
 
-##### 7. Now type ``` python manage.py runserver ``` or ``` python3 manage.py runserver ``` whichever works for you
+##### 7. Now type ``` $ python manage.py runserver ``` or ``` $ python3 manage.py runserver ``` whichever works for you
 
 ##### 8. Now go to the browser and type ``` localhost:8000 ``` in the address bar.
