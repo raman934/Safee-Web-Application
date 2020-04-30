@@ -4,7 +4,7 @@
 
 #### To open the project:
 
-##### 1. Go to your terminal
+##### 1. Go to your terminal and type ``` $ git clone https://github.com/raman934/Safee-Web-Application.git ```
 
 ##### 2. Move to the location where "ntcc_sem4" is present
 
