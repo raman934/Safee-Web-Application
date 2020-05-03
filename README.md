@@ -19,3 +19,8 @@
 ##### 7. Now type ``` $ python manage.py runserver ``` or ``` $ python3 manage.py runserver ``` whichever works for you
 
 ##### 8. Now go to the browser and type ``` localhost:8000 ``` in the address bar.
+
+NOTE: These commands are for linux, also if any of this steps does'nt work, check if you have all the necessary resources installed.
+
+
+For any query contact me at ramangandhi392000@gmail.com
