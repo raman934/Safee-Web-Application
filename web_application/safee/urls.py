@@ -7,4 +7,5 @@ urlpatterns = [
 	path('index/', views.index, name = 'safee-home'),
 	path('generic/', views.generic, name = 'safee-generic'),
 	path('elements/', views.elements, name = 'safee-elements'),
+	path('rick/', views.rick, name = 'safee-test'),
 ]

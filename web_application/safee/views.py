@@ -1,17 +1,9 @@
 from django.shortcuts import render
-
-posts = [
-	{
-		'author': 'Raman Gandhi',
-		'title': 'Safee - Web Application',
-		'content': 'Template Creation Undergoing',
-		'date_posted': 'April 28, 2020'
-	}
-]
+from .models import Post
 
 def home(request):
 	context = {
-		'posts': posts, 
+		'posts': Post.objects.all(), 
 		'title': 'safee'
 	}
 	return render(request, 'safee/home.html', context)
@@ -27,3 +19,6 @@ def generic(request):
 
 def elements(request):
 	return render(request, 'safee/elements.html', {'title': 'safee-elements'})
+
+def rick(request):
+	return render(request, 'safee/rick.html', {'title': 'safee-test'})

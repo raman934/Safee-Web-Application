@@ -6,7 +6,7 @@
 		<h4><br><br><a href="{% url 'safee-home' %}">Go To Home</a></h4>
 		<h4><br><br><a href="{% url 'safee-about' %}t">Go To About</a></h4>
 		<h1><br><br><br><br><br><br><br><br><br></h1>
-		<p style="text-align:right;">Project Made By {{ posts.author }}<br>Last Updated On : {{ posts.date_posted }}</p>
+		<p style="text-align:right;">Project Made By: Raman Gandhi<br>Last Updated On : {{ posts.date_posted|date:"jS F, Y, f A" }}</p>
 		
 
 	{% endfor %}
