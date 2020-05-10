@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'safee.apps.SafeeConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    'tailwind',
+    'theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,3 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+TAILWIND_APP_NAME = 'theme'
