@@ -2,11 +2,9 @@
 {% block content %}
 	{% for posts in posts %}
 		<h1 style="text-align:center;">{{ posts.title }}</h1>
-		<h3><br><br>{{ posts.content }}</h3>
-		<h4><br><br><a href="{% url 'safee-home' %}">Go To Home</a></h4>
-		<h4><br><br><a href="{% url 'safee-about' %}">Go To About</a></h4>
-		<h1><br><br><br><br><br><br><br><br><br></h1>
-		<p style="text-align:right;">Project Made By: Raman Gandhi<br>Last Updated On : {{ posts.date_posted|date:"jS F, Y, f A" }}</p>
+		<h3 style="text-align:center;"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;{{ posts.content }}</h3>
+		<h1><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
+		<p style="text-align:right;">Project Made By: Raman Gandhi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Last Updated On : {{ posts.date_posted|date:"jS F, Y, f A" }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 		
 
 	{% endfor %}

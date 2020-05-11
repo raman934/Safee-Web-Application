@@ -1,0 +1,90 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link href="{% static 'website/assets/css/Main.css' %}" rel="stylesheet"/>
+        <script src="{% static 'website/assets/js/jquery-1.10.2.min.js' %}"></script>
+        <title>About Me</title>
+    </head>
+    <body>
+        <div id="main">
+            <div id="object1">
+                <img src="{% static 'website/images/Obj.png' %}" height="200px" width="150px"/>
+            </div>
+            <div id="object2">
+                <img src="{% static 'website/images/Obj.png' %}"/>
+            </div>
+            <div id="object3">
+                <img src="{% static 'website/images/Obj.png' %}" height="500px" width="450px"/>
+            </div>
+            
+            <div id="layer">
+                <div id="msg">
+                    Safee
+                    <div id="zero">
+                        By Raman Gandhi
+                    </div>
+                </div>
+                <header class="site-header">
+                    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+                        <div class="container">
+                            <a class="navbar-brand mr-4">
+                                Django App
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon">
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarToggle">
+                                <div class="navbar-nav mr-auto">
+                                    <a class="nav-item nav-link" href="{% url 'safee' %}">
+                                        Back
+                                    </a>
+                                    <a class="nav-item nav-link" href="https://github.com/raman934">
+                                        Github Account
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </body>
+    <script>
+        var object1=$('#object1');
+        var object2=$('#object2');
+        var object3=$('#object3');
+        
+        var layer=$('#layer');
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 12); 
+           var valueY=(e.pageY * -1 / 12); 
+            
+            object1.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0) rotate(20deg)'
+            });
+        });
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 15); 
+           var valueY=(e.pageY * -1 / 20); 
+            
+            object2.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0)'
+            });
+        });
+        
+        layer.mousemove(function(e){
+           var valueX=(e.pageX * -1 / 15); 
+           var valueY=(e.pageY * -1 / 15); 
+            
+            object3.css({
+                'transform':'translate3d('+valueX+'px,'+valueY+'px,0) rotate(-20deg)'
+            });
+        });
+    </script>
+</html>
