@@ -10,7 +10,7 @@
 
 ##### 3. Type in your terminal ``` $ source ntcc_sem4/bin/activate ```
 
-##### 4. Now you are have activated the virtual environment
+##### 4. Now you have activated the virtual environment
 
 ##### 5. Now move inside the web_application directory using ``` $ cd web_application/ ```
 
@@ -18,9 +18,8 @@
 
 ##### 7. Now type ``` $ python manage.py runserver ``` or ``` $ python3 manage.py runserver ``` whichever works for you
 
-##### 8. Now go to the browser and type ``` localhost:8000 ``` in the address bar.
+##### 8. After checking that the server is working. Now go to the browser and type ``` localhost:8000 ``` in the address bar.
 
 NOTE: These commands are for linux, also if any of this steps does'nt work, check if you have all the necessary resources installed.
 
-
-For any query contact me at ramangandhi392000@gmail.com
+This project will be deployed online soon.
