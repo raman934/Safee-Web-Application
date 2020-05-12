@@ -6,8 +6,12 @@
 
         <link href="{% static 'website/assets/css/Main.css' %}" rel="stylesheet"/>
         <script src="{% static 'website/assets/js/jquery-1.10.2.min.js' %}"></script>
-        <title>About Me</title>
-    </head>
+        <!--{% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>About Me</title>
+        {% endif %}-->
+</head>
     <body>
         <div id="main">
             <div id="object1">
@@ -19,14 +23,23 @@
             <div id="object3">
                 <img src="{% static 'website/images/Obj.png' %}" height="500px" width="450px"/>
             </div>
-            
             <div id="layer">
-                <div id="msg">
-                    Safee
-                    <div id="zero">
-                        By Raman Gandhi
+                {% if title %}
+                    <title>{{ title }}</title>
+                    <div id="msg">
+                        <div id="zero2">
+                            {% block content %}{% endblock content %}
+                        </div>
                     </div>
-                </div>
+                {% else %}
+                    <title>About Me</title>
+                    <div id="msg">
+                        Safee
+                        <div id="zero">
+                            By Raman Gandhi
+                        </div>
+                    </div>
+                {% endif %}
                 <header class="site-header">
                     <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
                         <div class="container">

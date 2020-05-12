@@ -54,9 +54,13 @@ body{
     font-size: 40px;
     letter-spacing: 11px;
 }
+#zero2{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #ffffff;
 }
 
 ul {

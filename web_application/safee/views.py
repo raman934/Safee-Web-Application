@@ -9,7 +9,7 @@ def home(request):
 	return render(request, 'safee/home.html', context)
 
 def about(request):
-	return render(request, 'safee/about.html', {'title': 'safee-about'})
+	return render(request, 'safee/about.html')
 
 def index(request):
 	return render(request, 'safee/index.html', {'title': 'safee-home'})
@@ -19,6 +19,3 @@ def generic(request):
 
 def elements(request):
 	return render(request, 'safee/elements.html', {'title': 'safee-elements'})
-
-def rick(request):
-	return render(request, 'safee/rick.html', {'title': 'safee-test'})
