@@ -1,11 +1,23 @@
 {% extends "safee/base.html" %}
 {% block content %}
-	{% for posts in posts %}
-		<h1 style="text-align:center;">{{ posts.title }}</h1>
-		<h3 style="text-align:center;"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;{{ posts.content }}</h3>
+	{% for post in posts %}
+		<h1 style="text-align:center;">
+			{{ post.title }}
+		</h1>
+		<h3 style="text-align:center;">
+			<br><br>
+			{{ post.content }}
+		</h3>
 		<h1><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
-		<p style="text-align:right;">Project Made By: Raman Gandhi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Last Updated On : {{ posts.date_posted|date:"jS F, Y, f A" }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-		
-
+		<p style="text-align:right;">
+			Project Made By: Raman Gandhi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<br>
+			Last Updated On : {{ post.date_posted|date:"jS F, Y, f A" }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</p>
+		<div style="text-align: center;">
+			<a class="btn btn-outline-secondary" href="{% url 'post-detail' post.id %}">
+				See Post
+			</a>
+		</div>
 	{% endfor %}
 {% endblock content %}
