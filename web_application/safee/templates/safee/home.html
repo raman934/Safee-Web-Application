@@ -3,21 +3,48 @@
 	{% for post in posts %}
 		<h1 style="text-align:center;">
 			{{ post.title }}
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			{
+			<a class="btn btn-dark btn-lg" href="{% url 'user-posts' post.author.username %}">
+				{{ post.author }}
+			</a>
+			}
 		</h1>
 		<h3 style="text-align:center;">
-			<br><br>
+			<br>
 			{{ post.content }}
 		</h3>
-		<h1><br><br><br><br><br><br><br><br><br><br><br><br><br></h1>
+		<div style="text-align: center;">
+			<a class="btn btn-outline-light btn-lg" href="{% url 'post-detail' post.id %}">
+				See Post
+			</a>
+		</div>
+		<h1><br><br><br><br><br><br><br><br><br><br><br><br></h1>
 		<p style="text-align:right;">
 			Project Made By: Raman Gandhi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<br>
 			Last Updated On : {{ post.date_posted|date:"jS F, Y, f A" }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</p>
-		<div style="text-align: center;">
-			<a class="btn btn-outline-secondary" href="{% url 'post-detail' post.id %}">
-				See Post
-			</a>
-		</div>
 	{% endfor %}
+	{% if is_paginated %}
+	<div style="text-align: center;">
+      {% if page_obj.has_previous %}
+        <a class="btn btn-outline-danger mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-warning mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn btn-dark mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn btn-outline-success mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn btn-outline-warning mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn btn-outline-danger mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+      {% endif %}
+    </div>
+    {% endif %}
 {% endblock content %}
