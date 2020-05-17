@@ -58,12 +58,12 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        form.instance.date_posted = datetime.datetime.now()
         return super().form_valid(form)
 
     def test_func(self):
         post = self.get_object()
         if self.request.user == post.author:
-            post.date_posted = datetime.datetime.now()
             return True
         return False
 
