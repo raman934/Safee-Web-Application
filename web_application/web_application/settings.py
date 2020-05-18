@@ -137,3 +137,4 @@ TAILWIND_APP_NAME = 'theme'
 
 LOGIN_REDIRECT_URL = 'safee-home'
 LOGIN_URL = 'login'
+
