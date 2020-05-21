@@ -9,8 +9,6 @@
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	    <link rel="stylesheet" href="{% static 'website/assets/css/main2.css' %}" type="text/css">
-
-        <link rel="stylesheet" type="text/css" href="{% static 'website/assets/css/style1.css' %}" />
 		
 		{% if title %}
 			<title>{{ title }}</title>
@@ -21,7 +19,11 @@
 	<style>
 		body
 		{
-			background-color: #323232
+			background-image: url(../../../static/website/images/1a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333333;
+            margin-top: 5rem;
 		}
 		h1
 		{
@@ -93,13 +95,6 @@
 	    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	    <script src="{% static 'website/assets/js/new.js' %}"></script>
 	</body>
-	<ul class="cb-slideshow">
-        <li><span>Image 01</span><div><h3>Quote 1</h3></div></li>
-        <li><span>Image 02</span><div><h3>Quote 2</h3></div></li>
-        <li><span>Image 03</span><div><h3>Quote 3</h3></div></li>
-        <li><span>Image 04</span><div><h3>Quote 4</h3></div></li>
-        <li><span>Image 05</span><div><h3>Quote 5</h3></div></li>
-        <li><span>Image 06</span><div><h3>Quote 6</h3></div></li>
-    </ul>
 </html>

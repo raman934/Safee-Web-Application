@@ -1,6 +1,98 @@
-body {
-  color: #333333;
-  margin-top: 5rem;
+
+.background{
+    color: #999999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.background2{
+    color: #999999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
+}
+
+#cf3 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf3 img {
+  position:absolute;
+  left:0;
+  top:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf4 {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#cf4 img {
+  position:absolute;
+  right:0;
+  top:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  45% {
+    opacity:1;
+  }
+  55% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#cf3 img.top {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+}
+
+@keyframes cf4FadeInOut {
+  0% {
+    opacity:1;
+  }
+  45% {
+    opacity:1;
+  }
+  55% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+#cf4 img.top {
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 h1, h2, h3, h4, h5, h6 {

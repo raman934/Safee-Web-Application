@@ -1,5 +1,14 @@
 {% extends "safee/base.html" %}
 {% block content %}
+  <style>
+        body {
+            background-image: url(../../static/website/images/6a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333333;
+            margin-top: 5rem;
+        }
+    </style>
   <article class="media content-section">
     <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
     <div class="media-body">

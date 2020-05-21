@@ -1,5 +1,14 @@
 {% extends "safee/base.html" %}
 {% block content %}
+    <style>
+        body {
+            background-image: url(../../static/website/images/7a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333333;
+            margin-top: 5rem;
+        }
+    </style>
     <h1 class="mb-3">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
     {% for post in posts %}
         <article class="media content-section">

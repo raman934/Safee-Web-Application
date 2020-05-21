@@ -1,5 +1,27 @@
 {% extends "safee/base.html" %}
+{% load static %}
 {% block content %}
+	<style>
+		body {
+			background-image: url(../../static/website/images/bg.gif);
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: #333333;
+			margin-top: 5rem;
+		}
+	</style>
+	<div class="background">
+        	<div id="cf3" class="shadow">
+				<img class="bottom" src="{% static 'website/images/1.jpg' %}" />
+				<img class="top" src="{% static 'website/images/2.jpg' %}" />
+			</div>
+		</div>
+		<div class="background2">
+			<div id="cf4" class="shadow">
+				<img class="bottom" src="{% static 'website/images/7.jpg' %}" />
+				<img class="top" src="{% static 'website/images/3.jpg' %}" />
+			</div>
+   		</div>
 	{% for post in posts %}
 		<h1 style="text-align:center;">
 			{{ post.title }}

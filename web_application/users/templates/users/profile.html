@@ -1,6 +1,15 @@
 {% extends "safee/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+    <style>
+        body {
+            background-image: url(../../static/website/images/4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333333;
+            margin-top: 5rem;
+        }
+    </style>
     <div class="content-section">
       <div class="media">
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">

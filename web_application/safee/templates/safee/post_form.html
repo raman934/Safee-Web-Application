@@ -1,6 +1,15 @@
 {% extends "safee/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+    <style>
+        body {
+            background-image: url(../../../static/website/images/5a.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #333333;
+            margin-top: 5rem;
+        }
+    </style>
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}

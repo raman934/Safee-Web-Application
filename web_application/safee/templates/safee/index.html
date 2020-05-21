@@ -12,6 +12,65 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'website/assets/css/main.css' %}" />
 		<noscript><link rel="stylesheet" href="{% static 'website/assets/css/noscript.css' %}" /></noscript>
+		<style>
+			body
+			{
+				background-color: white;
+				color: #FFFFFF85;
+				--style1-color: #5e42a6;
+				--style2-color: #5052b5;
+				--style3-color: #b74e91;
+			}
+
+			.dark-mode
+			{
+				background-color: black;
+				color: #00000085;
+				--style1-color: #291d49;
+				--style2-color: #26265a;
+				--style3-color: #481e39;
+			}
+
+			.wrapper.alt
+			{
+				background-color: #261c3e;
+			}
+
+			.wrapper.style1
+			{
+				background-color: var(--style1-color);
+			}
+
+			.wrapper.style1-alt
+			{
+				background-color: #493382;
+			}
+
+			.wrapper.style2
+			{
+				background-color: var(--style2-color);
+			}
+
+			.wrapper.style2-alt
+			{
+				background-color: #3e4094;
+			}
+
+			.wrapper.style3
+			{
+				background-color: var(--style3-color);
+			}
+
+			.wrapper.style3-alt
+			{
+				background-color: #953d75;
+			}
+
+			#header
+			{
+				background-color: var(--style1-color);
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -33,7 +92,7 @@
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">What we do</a></li>
+							<li><a href="#two">Learn Some Activities</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -47,12 +106,29 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Safee</h1>
-							<p>A project made and designed by <a href="https://github.com/raman934">Raman Gandhi</a><br />
-							Used to inspire people to do something creative with the time they have</p>
+							<p>
+								<i>
+									Bored?
+									<br>
+									Want to learn something or just pass some time?
+									<br>
+									You are at the right place!
+								</i>
+								<br><br>
+								A project made and designed by <u><a href="https://github.com/raman934">Raman Gandhi</a></u><br>
+							</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 								<li><a href="#one" class="button scrolly">Get Started</a></li>
 							</ul>
+							<button onclick="myFunction()">Toggle dark mode</button>
+							<script>
+								function myFunction()
+								{
+									var element = document.body;
+									element.classList.toggle("dark-mode");
+								}
+							</script>
 						</div>
 					</section>
 
@@ -99,37 +175,40 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<h2>Learn Some Activities</h2>
+							<p>Here you can browse around on some computer technologies you can learn.</p>
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
+									<h3>Coding</h3>
+									<p>Get into Programming, learn some new languages from the very basics to becoming a pro, make your own projects or just learn some thoery.</p>
+									<ul class="actions">
+										<li><a href="{% url 'safee-generic' %}" class="button">Let's go</a></li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon solid major fa-music"></span>
+									<h3>Music</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
+									<span class="icon solid major fa-atom"></span>
+									<h3>Science</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
+									<span class="icon solid major fa-theater-masks"></span>
+									<h3>Acting</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
+									<span class="icon solid major fa-palette"></span>
+									<h3>Art</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
+									<span class="icon solid major fa-tv"></span>
+									<h3>Relax and Watch Some Series</h3>
 									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
 								</section>
 							</div>
@@ -187,7 +266,7 @@
 											<ul class="icons">
 												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://github.com/raman934" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 											</ul>
