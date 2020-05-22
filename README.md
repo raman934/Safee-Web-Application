@@ -8,13 +8,16 @@
 
 ##### 2. Move to the location where "ntcc_sem4" is present
 
-##### 3. Type in your terminal ``` $ source ntcc_sem4/bin/activate ```
+##### 3. Type in your terminal ``` $ source ntcc_sem4/bin/activate ``` or if you are a windows user, create a venv by typing ```$ python -m venv VENV_NAME``` and then activate it by typing ```$ VENV_NAME\Scripts\activate```
 
-##### 4. Now you have activated the virtual environment
+##### 4. Now you have activated the virtual environment. Now install the dependencies :
+###### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1)```$ pip install django``` (Version >= 2.1)
+
+NOTE: You can also see the list of tools you have in your venv, through ```$ pip list```
 
 ##### 5. Now move inside the web_application directory using ``` $ cd web_application/ ```
 
-##### 6. Now type ``` $ python --version ``` and it should display python version 3 if it doesn't, try ``` $ python3 --version ``` or just install python 3
+##### 6. Now type ``` $ python --version ``` and it should display python version 3 if it doesn't, try ``` $ python3 --version ``` or just install python 3 (Version >= 3.6)
 
 ##### 7. Now type ``` $ python manage.py runserver ``` or ``` $ python3 manage.py runserver ``` whichever works for you
 
