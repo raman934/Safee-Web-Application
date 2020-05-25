@@ -18,17 +18,30 @@
 				background-color: white;
 				color: #FFFFFF85;
 				--style1-color: #5e42a6;
+				--style1-alt-color: #493382;
 				--style2-color: #5052b5;
+				--style2-alt-color: #3e4094;
 				--style3-color: #b74e91;
+				--style3-alt-color: #953d75;
+				--sidebar: #312450;
 			}
 
 			.dark-mode
 			{
 				background-color: black;
-				color: #00000085;
-				--style1-color: #291d49;
+				color: #FFFFFF85;
+				--style1-color: #0b0812;
+				--style1-alt-color: #000000;
 				--style2-color: #26265a;
+				--style2-alt-color: #000000;
 				--style3-color: #481e39;
+				--style3-alt-color: #000000;
+				--sidebar: #0b0822;
+			}
+
+			#sidebar
+			{
+				background-color: var(--sidebar);
 			}
 
 			.wrapper.alt
@@ -43,7 +56,7 @@
 
 			.wrapper.style1-alt
 			{
-				background-color: #493382;
+				background-color: var(--style1-alt-color);
 			}
 
 			.wrapper.style2
@@ -53,7 +66,7 @@
 
 			.wrapper.style2-alt
 			{
-				background-color: #3e4094;
+				background-color: var(--style2-alt-color);
 			}
 
 			.wrapper.style3
@@ -63,7 +76,7 @@
 
 			.wrapper.style3-alt
 			{
-				background-color: #953d75;
+				background-color: var(--style3-alt-color);
 			}
 
 			#header
@@ -90,10 +103,23 @@
 				<div class="inner">
 					<nav>
 						<ul>
+							<li>
+								<button class="button small" onclick="myFunction()">
+									Toggle dark mode
+								</button>
+								<script>
+									function myFunction()
+									{
+										var element = document.body;
+										element.classList.toggle("dark-mode");
+									}
+								</script>
+							</li>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">Who we are</a></li>
 							<li><a href="#two">Learn Some Activities</a></li>
 							<li><a href="#three">Get in touch</a></li>
+
 						</ul>
 					</nav>
 				</div>
@@ -105,7 +131,7 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Safee</h1>
+							<h1><a href="{% url 'safee' %}">Safee</a></h1>
 							<p>
 								<i>
 									Bored?
@@ -121,14 +147,7 @@
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
 								<li><a href="#one" class="button scrolly">Get Started</a></li>
 							</ul>
-							<button onclick="myFunction()">Toggle dark mode</button>
-							<script>
-								function myFunction()
-								{
-									var element = document.body;
-									element.classList.toggle("dark-mode");
-								}
-							</script>
+							
 						</div>
 					</section>
 
