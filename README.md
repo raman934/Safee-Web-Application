@@ -10,7 +10,7 @@
 
 ##### 3. Type in your terminal ``` $ source ntcc_sem4/bin/activate ``` or if you are a windows user, create a venv by typing ```$ python -m venv VENV_NAME``` and then activate it by typing ```$ VENV_NAME\Scripts\activate```
 
-##### 4. Now you have activated the virtual environment. Now install the dependencies using ```$ pip install -r requirements.txt```
+##### 4. Now you have activated the virtual environment. Go to the "web_application" directory. Now install the dependencies using ```$ pip install -r requirements.txt```
 
 NOTE: You can also see the list of tools you have in your venv, through ```$ pip list```
 
